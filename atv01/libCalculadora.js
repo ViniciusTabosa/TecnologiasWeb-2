@@ -1,5 +1,3 @@
-var nome = 'calculando...'
-
 function soma(num1, num2){
     return num1+num2
 }
@@ -18,7 +16,7 @@ function div(num1, num2){
 }
 
 function potencia(num1, num2){
-    return num1**num2
+    return Math.pow(num1, num2)
 }
 
 function hipotenusa(a, b){
@@ -28,6 +26,11 @@ function hipotenusa(a, b){
 function areaTrapezio(B, b, h){
     return ((B+b)*h)/2
 }
+
+function volumeEsfera(r){
+    return (4 * Math.PI * Math.pow(r, 3))/3
+}
+
 module.exports = {
     soma,
     sub,
@@ -36,5 +39,5 @@ module.exports = {
     potencia,
     hipotenusa,
     areaTrapezio,
-    nome
+    volumeEsfera
 }

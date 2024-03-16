@@ -2,14 +2,27 @@
     Atividade 01 - Tecnologias Web II
 */
 
-var calc = require('./calculadora')
+//var calc = require('./libCalculadora')
+var escolha = require('./controleFuncoes')
+var readline = require('readline');
 
-console.log(`Soma: ${calc.soma(2,3)}`)
-console.log(`Subtração: ${calc.sub(10,3)}`)
-console.log(`Multiplicação: ${calc.multi(2,10)}`)
-console.log(`Divisão: ${calc.div(10,2)}`)
-console.log(`Potência: ${calc.potencia(10,2)}`)
-console.log(`Hipotenusa: ${calc.hipotenusa(3, 4)}`)
-console.log(`Area do trapézio: ${calc.areaTrapezio(6, 3, 4)} \n`)
+var leitor = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
 
-console.log(calc.nome)
+leitor.question(`  
+Digite o número da função que deseja executar?\n
+    1 -> Soma
+    2 -> Subtração
+    3 -> Multiplicação
+    4 -> Divisão
+    5 -> Potência
+    6 -> Teorema de Pitágoras
+    7 -> Area de um trapézio
+    8 -> Volume de uma esfera
+`, function(answer) {
+    
+    escolha.escolherFuncao(answer)
+    leitor.close();
+});
