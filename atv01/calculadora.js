@@ -2,7 +2,6 @@
     Atividade 01 - Tecnologias Web II
 */
 
-//var calc = require('./libCalculadora')
 var escolha = require('./controleFuncoes')
 var readline = require('readline');
 
