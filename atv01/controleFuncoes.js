@@ -1,43 +1,59 @@
 var funcao = require('./libCalculadora')
-var readline = require('readline');
+var input = require('readline-sync');
 
-function escolherFuncao(n){
-    switch (n){
+function escolherFuncao(resposta){
+    let n1, n2
+    switch (resposta){
         case '1': //soma
-            leitor = readline.createInterface({
-                input: process.stdin,
-                output: process.stdout
-            });
+            console.log('\nSOMA')
+            n1 = Number.parseFloat(input.question('Digite um numero: '))
+            n2 = Number.parseFloat(input.question('Digite outro numero: '))
+            return (`Resultado = ${funcao.soma(n1, n2)}`)
 
-            leitor.question('Digite o primeiro valor: ', function(answer){
-                let v1 = answer
-                leitor.close()
-            })
-        
-            break;
         case '2': //subtração
-            console.log('escolhido opção 2');
-            break;
+            console.log('\nSUBTRACAO')
+            n1 = Number.parseFloat(input.question('Digite um numero: '))
+            n2 = Number.parseFloat(input.question('Digite outro numero: '))
+            return (`Resultado = ${funcao.sub(n1, n2)}`)
+
         case '3': //multiplicação
-            console.log('escolhido opção 3');
-            break;
+            console.log('\nMULTIPICLACAO')
+            n1 = Number.parseFloat(input.question('Digite um numero: '))
+            n2 = Number.parseFloat(input.question('Digite outro numero: '))
+            return (`Resultado = ${funcao.multi(n1, n2)}`)
+
         case '4': //divisão
-            console.log('escolhido opção 4');
-            break;
+            console.log('\nDIVISAO')
+            n1 = Number.parseFloat(input.question('Digite um numero: '))
+            n2 = Number.parseFloat(input.question('Digite outro numero: '))
+            return (`Resultado = ${funcao.div(n1, n2)}`)
+
         case '5': //potência
-            console.log('escolhido opção 5');
-            break;
-        case '6': //hipotenusa - c = sqrt(a**2 + b**2)
-            console.log('escolhido opção 6');
-            break;
-        case '7': //área do trapézio - ((bmaior+bmenor)*h)/2
-            console.log('escolhido opção 7');
-            break;
-        case '8': //volume e uma esfera - (4 * Math.PI * Math.pow(r, 3))/3
-            console.log('escolhido opção 8');
-            break;
+            console.log('\nPOTENCIACAO')
+            n1 = Number.parseFloat(input.question('Digite o numero base: '))
+            n2 = Number.parseFloat(input.question('Digite o expoente: '))
+            return (`Resultado = ${funcao.potencia(n1, n2)}`)
+
+        case '6': //hipotenusa
+            console.log('\nTEOREMA DE PITAGORAS')
+            n1 = Number.parseFloat(input.question('Digite o cateto oposto: '))
+            n2 = Number.parseFloat(input.question('Digite o cateto adjacente: '))
+            return (`Hipotenusa = ${funcao.hipotenusa(n1, n2)}`)
+
+        case '7': //área do trapézio
+            console.log('\nAREA DO TRAPEZIO')
+            n1 = Number.parseFloat(input.question('Digite a base maior: '))
+            n2 = Number.parseFloat(input.question('Digite a base menor: '))
+            let n3 = Number.parseFloat(input.question('Digite a altura: '))
+            return (`Area do trapezio = ${funcao.areaTrapezio(n1, n2, n3)}`)
+
+        case '8': //volume e uma esfera
+            console.log('\nVOLUME DA ESFERA')
+            n1 = Number.parseFloat(input.question('Digite o tamanho do raio: '))
+            return (`Volume = ${funcao.volumeEsfera(n1)}`)
+
         default:
-            console.log('Erro: Digite um valor de 1 a 8')
+            return ('Erro: Escolha a operacao digitando um numero de 1 a 8')
     }
     
 }

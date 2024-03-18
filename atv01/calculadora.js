@@ -1,27 +1,24 @@
-/*
-    Atividade 01 - Tecnologias Web II
+/**
+ * Atividade 01 - Tecnologias Web II
+ * 
+ * Obs: necessita do móculo ReadlineSync (npm i readline-sync para instalar)
 */
 
+
 var escolha = require('./controleFuncoes')
-var readline = require('readline');
+var input = require('readline-sync');
 
-var leitor = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-});
-
-leitor.question(`  
-Digite o número da função que deseja executar?\n
+console.log(`  
+Calculadora
     1 -> Soma
-    2 -> Subtração
-    3 -> Multiplicação
+    2 -> Subtracao
+    3 -> Multiplicacao
     4 -> Divisão
-    5 -> Potência
-    6 -> Teorema de Pitágoras
-    7 -> Area de um trapézio
-    8 -> Volume de uma esfera
-`, function(answer) {
-    
-    escolha.escolherFuncao(answer)
-    leitor.close()
-});
+    5 -> Potencia
+    6 -> Teorema de Pitagoras
+    7 -> Area de um trapezio
+    8 -> Volume de uma esfera`)
+
+let resposta = input.question('Escolha o numero da funcao: ')
+
+console.log(escolha.escolherFuncao(resposta))
