@@ -23,5 +23,5 @@ Digite o número da função que deseja executar?\n
 `, function(answer) {
     
     escolha.escolherFuncao(answer)
-    leitor.close();
+    leitor.close()
 });

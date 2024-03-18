@@ -11,8 +11,9 @@ function escolherFuncao(n){
 
             leitor.question('Digite o primeiro valor: ', function(answer){
                 let v1 = answer
+                leitor.close()
             })
-            console.log('escolhido opção 1');
+        
             break;
         case '2': //subtração
             console.log('escolhido opção 2');
