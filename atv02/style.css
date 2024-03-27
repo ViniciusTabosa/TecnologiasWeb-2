@@ -1,7 +1,9 @@
 /*
 Paleta
 Azul - #357DED
-Rosa - #D90368
+Rosa 1 - #D90368
+Rosa 2 - #9D0276
+Rosa 3 - #B8038A
 Roxo - #820263
 Preto - #0C120C
 Amarelo - #F0C808
@@ -72,7 +74,7 @@ body{
 
 
 .sessao-produtos {
-    background-color: #820263;
+    background-color: #B8038A;
     width: 95%;
     margin: auto;
     margin-bottom: 1rem;
@@ -81,14 +83,6 @@ body{
     border-radius: 10px;
     display: grid;
     grid-template-columns: 20% auto;
-}
-
-#promocao{
-    background-color: #9D0276;
-}
-
-#depoimento{
-    background-color: #B8038A;
 }
 
 .h3-section{
@@ -115,8 +109,8 @@ body{
 }
 
 
-.depoimentos{
-    background-color: #820263;
+.sessao-avaliacoes{
+    background-color: #B8038A;
     width: 95%;
     margin: auto;
     margin-top: 1rem;
@@ -125,7 +119,17 @@ body{
     padding: 1rem;
 }
 
+.area-avaliacoes{
+    display: grid;
+    grid-template-rows: repeat(3, 50%);
+    gap: 0.5rem;
+}
 
+.avaliacao-usuario{
+    background-color: #F0C808;
+    box-shadow: -3px 3px 1px #357DED;
+    padding: 5px;
+}
 
 .rodape{
     background-color: #F0C808;
