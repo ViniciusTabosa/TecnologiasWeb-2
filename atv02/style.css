@@ -1,19 +1,135 @@
+/*
+Paleta
+Azul - #357DED
+Rosa - #D90368
+Roxo - #820263
+Preto - #0C120C
+Amarelo - #F0C808
+*/
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0px;
+    background-color: #0C120C;
+}
+
+
+
 .cabecalho{
-    background-color: beige;
+    background-color: #F0C808;
+    margin-top: -21.4px;
+    height: 10rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 1rem;
 }
 
-.produtos-destaque {
-    background-color: rgb(211, 252, 211);
+.logo-slogan{
+    margin-left: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
-.promocoes{
-    background-color: lightcoral;
+.logo-slogan h1{
+    margin-bottom: -3rem;
+    font-size: 35px;
 }
+
+.logo-slogan p{
+    font-size: 15px;
+}
+
+.menu-nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu-nav ul{
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.menu-nav li{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.menu-nav li:hover{
+    box-shadow: -3px 3px 1px #357DED;
+}
+
+.menu-nav a{
+    text-decoration: none;
+    color: #0C120C;
+}
+
+
+
+.sessao-produtos {
+    background-color: #820263;
+    width: 95%;
+    margin: auto;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    height: 15rem;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 20% auto;
+}
+
+#promocao{
+    background-color: #9D0276;
+}
+
+#depoimento{
+    background-color: #B8038A;
+}
+
+.h3-section{
+    color: #F0C808;
+    font-size: 30px;
+}
+
+.area-produtos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.produto{
+    background-color: #D90368;
+    width:20%;
+    height: 90%;
+    border-radius: 10px;
+}
+
+.produto:hover{
+    box-shadow: -3px 3px 1px #357DED;
+}
+
 
 .depoimentos{
-    background-color: khaki;
+    background-color: #820263;
+    width: 95%;
+    margin: auto;
+    margin-top: 1rem;
+    height: 15rem;
+    border-radius: 10px;
+    padding: 1rem;
 }
 
+
+
 .rodape{
-    background-color: lightsalmon;
+    background-color: #F0C808;
+    margin: 0;
+    margin-top: 1rem;
+    padding: 0;
 }
